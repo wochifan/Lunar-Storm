@@ -1,0 +1,175 @@
+// Variables
+@import "variables";
+
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family:'heavy-trip';
+  src: url('assets/sass/fonts/heavy-trip.woff2') format('woff2'),
+  url('assets/sass/fonts/heavy-trip.woff') format('woff'),
+  url('assets/sass/fonts/heavy-trip.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.contenu{
+  background-color: rgba($light-color, 0.7);
+  margin-top: 20px;
+}
+
+h1.band-title{
+  font-family:heavy-trip, sans-serif;
+  font-size:10em;
+  color: black;
+  @media (max-width: 600px) {
+    font-size: 6em;
+  }
+}
+
+.band-title {
+  font-family:heavy-trip, sans-serif;
+  font-size:1.5em;
+}
+
+.web-title {
+  width:100%;
+  overflow: auto;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(assets/img/lunar_storm_jk.jpg) no-repeat;
+  background-size: cover;
+}
+
+header{
+  background-color: rgba($light-color, 0.7);
+}
+
+nav {
+  color :$dark-color;
+  border-bottom: $dark-color solid 1px;
+  ul{
+    li{
+      display: inline-block;
+      padding: 1.2em 1.2em 0 1.2em;
+      .brand-name{
+        font-size: 1.5em;
+        padding-right: 1.5em;
+        font-family: $font-title;
+      }
+      a{
+        text-decoration: none;
+        color: $dark-color;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+.bg-opacity{
+  background-color: rgba($dark-color, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-fb{
+  max-width:150px;
+  max-height:100px;
+}
+
+.swipe-transition-enter-active, .swipe-transition-leave-active {
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.swipe-transition-enter-active{
+  transition-delay: 0.5s;
+}
+
+.swipe-transition-enter{
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.swipe-transition-leave-active{
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.lightbox-Gmap {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-color: rgba(#FFF, 0.9);
+  display:flex;
+  .Gmap{
+    margin:auto;
+  }
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: url(assets/img/cross.svg) transparent no-repeat;
+  background-size: 30px 30px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.lightbox__close:hover {
+  transform: scale(1.2);
+}
+
+.biography {
+  @media (min-width: 750px) and (max-width: 1000px) {
+    margin-left:50px;
+  }
+}
+
+.bandcamp {
+  width:400px;
+  @media (max-width: 400px) {
+    width:270px;
+  }
+}

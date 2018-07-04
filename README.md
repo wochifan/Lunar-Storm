@@ -12,6 +12,6 @@ A component to manage the concerts list.
 If you want to use this example, you just need to create a file APIKeys.js in /src and export the following const with your key/token :
 * APIKEY_FIREBASE : Firebase is used as database for the concerts list
 * APIKEY_GMAP : Google Map allows us to have an auto-completion and to show the map for the concerts.
-* APIKEY_FB : A module with Facebook, not used allows you to collect the photos on a fb page you administrate
+* APIKEY_FB : A module with Facebook, not used, but allows you to collect the photos on a fb page you administrate
 
 You can add a video in /public/video in order to have it as background. (You would change the name in the index.html)

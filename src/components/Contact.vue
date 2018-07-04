@@ -1,6 +1,6 @@
 <template>
     <div class="row contenu">
-        Ici les contacts
+
     </div>
 </template>
 

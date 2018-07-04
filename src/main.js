@@ -36,12 +36,9 @@ const router = new VueRouter({
        component: require('./components/ListeConcerts.vue').default,
        name: 'concerts'
      },{
-       path: '/contact-groupe-rock',
-       components: {
-           default: require('./components/Contact.vue').default,
-           another: require('./components/ImagesFb.vue').default,
-    },
-       name: 'contacts'
+         path: '/contact-groupe-rock',
+         component: require('./components/Contact.vue').default,
+         name: 'contacts'
      },{
        path: '/addconcert',
        component: require('./components/AjoutConcert.vue').default,

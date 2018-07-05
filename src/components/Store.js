@@ -4,11 +4,9 @@ class Store {
             concert: false
         }
     }
-
     open(concert) {
         this.state.concert = concert
     }
-
     close() {
         this.state.concert = false
     }

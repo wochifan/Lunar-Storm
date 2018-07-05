@@ -1,6 +1,6 @@
 <template>
-    <div class="row contenu">
-
+    <div>
+        caca
     </div>
 </template>
 
@@ -9,3 +9,7 @@
 
     }
 </script>
+
+<style>
+
+</style>

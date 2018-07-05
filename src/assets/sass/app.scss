@@ -49,6 +49,10 @@ h1.band-title{
   }
 }
 
+h2{
+  font-family:heavy-trip, sans-serif;
+}
+
 .band-title {
   font-family:heavy-trip, sans-serif;
   font-size:1.5em;
@@ -92,6 +96,7 @@ nav {
         color: $dark-color;
       }
       a:hover{
+        color: $primary-color;
         text-decoration: none;
       }
     }
@@ -202,4 +207,17 @@ nav {
       filter:grayscale(100%)
     }
   }
+}
+
+.logos-media{
+  img{
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.btn-fb{
+  height: 40px;
+  margin-left: 20px;
 }

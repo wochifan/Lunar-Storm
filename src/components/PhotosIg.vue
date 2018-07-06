@@ -1,6 +1,13 @@
 <template>
     <div>
-        {{photos}}
+        <pre>
+            <div class="row" v-for="photo in photosIg" :key="photo">
+                <img :src="photo" alt="">
+            </div>
+
+        </pre>
+
+
     </div>
 </template>
 
@@ -11,13 +18,22 @@
     export default {
         data () {
             return {
-                photos: null
+                photosIg: []
             }
+        },
+        methods: {
+          recupPhotosIg (albums_IG) {
+              if (this.photosIg.length === 0) {
+                  for (let i = 0; i < albums_IG.data.length; i++) {
+                      this.photosIg.push(albums_IG.data[i].images.standard_resolution.url)
+                  }
+              }
+          }
         },
         created() {
             axios.get('https://api.instagram.com/v1/users/self/media/recent/?access_token='.concat(APIKEY_IG))
                 .then(response => {
-                    this.photos = response.data
+                    this.recupPhotosIg(response.data)
                 })
                 .catch(e => {
                     this.errors.push(e)

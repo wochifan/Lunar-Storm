@@ -35,7 +35,7 @@
         },
         created() {
             let AuthStr = 'Bearer '.concat(APIKEY_FB);
-            axios.get('https://graph.facebook.com/1949308802052732?fields=albums{photos{images}}',
+            axios.get('https://graph.facebook.com/1949308802052732?fields=albums{photos.limit(10){images}}',
                 {headers : {Authorization : AuthStr} })
                 .then(response => {
                     this.recupImagesFb(response.data.albums.data)

@@ -1,6 +1,6 @@
 <template>
     <div class="contenu">
-        <h2>Nous suivre</h2>
+        <h2>Nos nouvelles publications</h2>
         <div class="logos-media">
                 <img @click="showFB" src="../assets/img/FB-logo.svg" alt="Facebook">
                 <img @click="showYT" src="../assets/img/YT-logo.svg" alt="Youtube">
@@ -32,7 +32,7 @@
         data () {
             return {
                 FB : false,
-                YT : false,
+                YT : true,
                 IG : false
             }
         },

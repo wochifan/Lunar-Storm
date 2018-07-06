@@ -1,14 +1,11 @@
 <template>
-    <div>
-        <pre>
-            <div class="row" v-for="photo in photosIg" :key="photo">
-                <img :src="photo" alt="">
+            <div class="row  albumRs">
+                <div v-if="photosIg" class="row">
+                    <div  v-for="photo in photosIg" :key="photo" class="col-lg-3 col-md-4 col-sm-6 photoRs">
+                        <img :src="photo" class="img-fluid">
+                    </div>
+                </div>
             </div>
-
-        </pre>
-
-
-    </div>
 </template>
 
 <script>

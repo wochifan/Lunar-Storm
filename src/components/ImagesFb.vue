@@ -1,9 +1,9 @@
 <template>
 
-    <div class="row" id="social">
+    <div class="row albumRs">
         <div class="row" v-if="photos_fb">
-                <div v-for="photo in photos_fb" :key="photo" class="col-4">
-                    <img :src="photo" alt="" class="img-fluid">
+                <div v-for="photo in photos_fb" :key="photo" class="col-lg-3 col-md-4 col-sm-6 photoRs">
+                    <img :src="photo" class="img-fluid">
                 </div>
         </div>
     </div>

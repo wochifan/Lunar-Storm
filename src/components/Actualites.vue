@@ -6,6 +6,11 @@
                 <img @click="showYT" src="../assets/img/YT-logo.svg" alt="Youtube">
                 <img @click="showIG" src="../assets/img/IG-logo.svg" alt="Instagram">
         </div>
+        <div class="iframeFb" v-if="FB">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flunarstormparis%2F&tabs&width=340&height=154&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=672812593087163"
+                    width="340" height="154" style="border:none;overflow:hidden" scrolling="no"
+                    frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
         <div class="imagesFB" v-if="FB">
             <images-fb></images-fb>
         </div>

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <header>
         <div class="socialmedia">
             <ul>
@@ -9,8 +8,9 @@
                 <li><a target="_blank" href="https://www.instagram.com/lunarstorm_paris/"><img src="./assets/img/IG-logo.svg" alt="Instagram"></a></li>
             </ul>
         </div>
-        <div class="web-title"><h1 class="band-title">Lunar Storm</h1>
-        <nav class="nav justify-content-center">
+        <div class="web-title">
+            <h1 class="band-title">Lunar Storm</h1>
+            <nav class="nav justify-content-center">
             <ul class="nav">
                 <li id="accueil-menu"><router-link :to="{name: 'root'}" >Accueil</router-link></li>
                 <li><router-link :to="{name: 'ecoute'}">Nous écouter</router-link></li>

@@ -22,7 +22,7 @@ export default {
         LightboxGoogleMap
     },
     firebase: {
-        concerts: concertsRef
+        concerts: concertsRef,
     },
     methods: {
         openGMap (concert) {

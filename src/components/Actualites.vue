@@ -1,6 +1,6 @@
 <template>
     <div class="contenu">
-        <h2>Nos nouvelles publications</h2>
+        <h2>Nos recentes publications</h2>
         <div class="logos-media">
                 <img @click="showFB" src="../assets/img/FB-logo.svg" alt="Facebook">
                 <img @click="showYT" src="../assets/img/YT-logo.svg" alt="Youtube">

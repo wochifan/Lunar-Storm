@@ -10,3 +10,5 @@ const app = initializeApp({
 
 export const db = app.database();
 export const concertsRef = db.ref('Concerts');
+export const loginRef = db.ref('Login');
+export const tokenRef = db.ref('Token');

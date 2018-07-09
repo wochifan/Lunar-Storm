@@ -241,6 +241,14 @@ nav {
   }
 }
 
-.iframeFb{
+.router-link-exact-active {
+  color:$primary-color;
+}
 
+.bg-login{
+  background-color: rgba($light-color, 0.8);
+  display:flex;
+  .login{
+    margin:auto;
+  }
 }

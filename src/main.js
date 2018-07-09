@@ -25,31 +25,62 @@ Vue.use(VueGoogleMaps, {
 const router = new VueRouter({
      mode: 'history',
      routes: [{
-       path: '/',
-       name: 'root'
+         path: '/',
+         name: 'root'
      },{
-       path: '/musique-rock-paris',
-       component: require('./components/Ecoute.vue').default,
-       name: 'ecoute'
+         path: '/musique-rock-paris',
+         component: require('./components/Ecoute.vue').default,
+         name: 'ecoute'
      },{
-       path: '/concerts-rock-paris',
-       component: require('./components/ListeConcerts.vue').default,
-       name: 'concerts'
+         path: '/concerts-rock-paris',
+         component: require('./components/ListeConcerts.vue').default,
+         name: 'concerts'
      },{
          path: '/contact-groupe-rock',
          component: require('./components/Actualites.vue').default,
          name: 'actualites'
      },{
-       path: '/addconcert',
-       component: require('./components/AjoutConcert.vue').default,
-       name: 'ajoutConcert'
+         path: '/addconcert',
+         component: require('./components/AjoutConcert.vue').default,
+         name: 'ajoutConcert',
+         meta: { requiresAuth: true }
      },{
-       path: '*',
-       redirect: '/'
+         path: '/login',
+         component: require('./components/Login.vue').default,
+         name: 'login',
+     },{
+         path: '*',
+         redirect: '/'
          }]
+});
+
+import {tokenRef} from "./firebase";
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        if (!localStorage.accessToken) {
+            next({
+                path: '/login',
+                query: {redirect: to.fullPath}
+        })
+        } else {
+        tokenRef.on('value', function (snapshot){
+            let tokenAlea = snapshot.val().alea.value
+            if (localStorage.accessToken.toString() !== tokenAlea.toString()) {
+                next({
+                    path: '/login',
+                    query: {redirect: to.fullPath}
+                })
+            } else {
+                next ()
+            }
+        })
+    }} else {
+        next()
+    }
 })
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 const app = new Vue({
     router,

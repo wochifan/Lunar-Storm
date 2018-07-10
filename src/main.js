@@ -29,8 +29,7 @@ const router = new VueRouter({
          name: 'root'
      },{
          path: '/musique-rock-paris',
-         component: require('./components/Ecoute.vue').default,
-         name: 'ecoute'
+         name: 'biographie'
      },{
          path: '/concerts-rock-paris',
          component: require('./components/ListeConcerts.vue').default,

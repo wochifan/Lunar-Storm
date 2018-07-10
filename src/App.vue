@@ -13,7 +13,7 @@
             <nav class="nav justify-content-center">
             <ul class="nav">
                 <li id="accueil-menu"><router-link :to="{name: 'root'}" >Accueil</router-link></li>
-                <li><router-link :to="{name: 'ecoute'}">Nous écouter</router-link></li>
+                <li><router-link :to="{name: 'biographie'}">Nous écouter</router-link></li>
                 <li><router-link :to="{name: 'concerts'}">Nos concerts</router-link></li>
                 <li><router-link :to="{name: 'actualites'}">Nos actualités</router-link></li>
             </ul>
@@ -24,16 +24,42 @@
           <transition name="swipe-transition">
               <router-view></router-view>
           </transition>
-          <router-view name="another"></router-view>
+          <biographie :class="{hidden: !biographie}"></biographie>
       </div>
   </div>
 </template>
 
 <script>
+    import Biographie from './components/Biographie'
+    import {BIOGRAPHIE} from "./components/biographie";
 
-export default {
+    export default {
     name: 'app',
-
+    data () {
+        return {
+            biographie: null
+        }
+    },
+    components: {
+        Biographie
+    },
+    watch: {
+        '$route': 'fetchBio'
+    },
+    methods: {
+        fetchBio () {
+            if (this.$route.name === 'biographie') {
+                this.biographie = BIOGRAPHIE
+            } else {
+                this.biographie = null
+            }
+        }
+    },
+        created () {
+            // fetch the data when the view is created and the data is
+            // already being observed
+            this.fetchBio()
+        }
 }
 </script>
 

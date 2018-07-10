@@ -24,7 +24,10 @@
           <transition name="swipe-transition">
               <router-view></router-view>
           </transition>
-          <biographie :class="{hidden: !biographie}"></biographie>
+          <transition name="swipe-transition">
+              <biographie v-show="biographie"></biographie>
+          </transition>
+
       </div>
   </div>
 </template>
@@ -56,8 +59,6 @@
         }
     },
         created () {
-            // fetch the data when the view is created and the data is
-            // already being observed
             this.fetchBio()
         }
 }

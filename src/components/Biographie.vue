@@ -3,8 +3,8 @@
         <div class="col-md-6 col-sm-12">
 
             <iframe class="bandcamp"
-                    style="border: 0; height: 406px; margin-top:35px;"
-                    src="https://bandcamp.com/EmbeddedPlayer/album=3891024960/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=small/transparent=true/"
+                    style="border: 0; width: 400px; height: 406px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=3891024960/size=large/bgcol=333333/linkcol=ffffff/artwork=small/transparent=true/"
                     seamless><a href="http://lunarstormparis.bandcamp.com/album/so-far-from-home">So Far From Home by Lunar Storm</a></iframe>
         </div>
 

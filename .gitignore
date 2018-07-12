@@ -1,9 +1,6 @@
 # Files with API Key
 src/APIKeys.js
 
-#folder with video
-public/video
-
 .DS_Store
 node_modules
 /dist

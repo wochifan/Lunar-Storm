@@ -22,10 +22,10 @@
     </header>
       <div class="container">
           <transition name="swipe-transition">
-              <router-view></router-view>
+              <biographie v-show="biographie"></biographie>
           </transition>
           <transition name="swipe-transition">
-              <biographie v-show="biographie"></biographie>
+              <router-view></router-view>
           </transition>
 
       </div>
@@ -34,13 +34,12 @@
 
 <script>
     import Biographie from './components/Biographie'
-    import {BIOGRAPHIE} from "./components/biographie";
 
     export default {
     name: 'app',
     data () {
         return {
-            biographie: null
+            biographie: false
         }
     },
     components: {
@@ -51,12 +50,8 @@
     },
     methods: {
         fetchBio () {
-            if (this.$route.name === 'biographie') {
-                this.biographie = BIOGRAPHIE
-            } else {
-                this.biographie = null
+                this.biographie = (this.$route.name === 'biographie')
             }
-        }
     },
         created () {
             this.fetchBio()

@@ -11,12 +11,14 @@
             <tr>
                 <th>
                 <input type="datetime-local" v-model="newConcert.date">
-                </th>
-                <th>
                     <gmap-autocomplete
+                            style="width:40vw; margin-left:10px;"
                             :value="newConcert.lieu"
                             @place_changed="setPlace">
                     </gmap-autocomplete>
+                </th>
+                <th>
+
                 </th>
                 <th>
                 <button class="btn alert-success" @click="addConcert">Valider</button>

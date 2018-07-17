@@ -26,10 +26,11 @@ const router = new VueRouter({
      mode: 'history',
      routes: [{
          path: '/',
+         component: require('./components/Biographie').default,
          name: 'root'
      },{
          path: '/musique-rock-paris',
-         name: 'biographie'
+         name: 'ecoute'
      },{
          path: '/concerts-rock-paris',
          component: require('./components/ListeConcerts.vue').default,
@@ -47,6 +48,10 @@ const router = new VueRouter({
          path: '/login',
          component: require('./components/Login.vue').default,
          name: 'login',
+     },{
+         path: '/mentionslegales',
+         component: require('./components/MentionsLegales').default,
+         name: 'mentionslegales',
      },{
          path: '*',
          redirect: '/'

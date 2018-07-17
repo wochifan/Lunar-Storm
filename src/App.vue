@@ -11,18 +11,18 @@
         <div class="web-title">
             <h1 class="band-title">Lunar Storm</h1>
             <nav class="nav justify-content-center">
-            <ul class="nav">
+            <ul class="nav font-menu">
                 <li id="accueil-menu"><router-link :to="{name: 'root'}" >Accueil</router-link></li>
-                <li><router-link :to="{name: 'biographie'}">Nous écouter</router-link></li>
+                <li><router-link :to="{name: 'ecoute'}">Nous ecouter</router-link></li>
                 <li><router-link :to="{name: 'concerts'}">Nos concerts</router-link></li>
-                <li><router-link :to="{name: 'actualites'}">Nos actualités</router-link></li>
+                <li><router-link :to="{name: 'actualites'}">Nos actualites</router-link></li>
             </ul>
         </nav>
         </div>
     </header>
       <div class="container">
           <transition name="swipe-transition">
-              <biographie v-show="biographie"></biographie>
+              <ecoute v-show="ecoute"></ecoute>
           </transition>
           <transition name="swipe-transition">
               <router-view></router-view>
@@ -33,28 +33,28 @@
 </template>
 
 <script>
-    import Biographie from './components/Biographie'
+    import Ecoute from './components/Ecoute'
 
     export default {
     name: 'app',
     data () {
         return {
-            biographie: false
+            ecoute: false
         }
     },
     components: {
-        Biographie
+        Ecoute
     },
     watch: {
-        '$route': 'fetchBio'
+        '$route': 'fetchEcoute'
     },
     methods: {
-        fetchBio () {
-                this.biographie = (this.$route.name === 'biographie')
+        fetchEcoute () {
+                this.ecoute = (this.$route.name === 'ecoute')
             }
     },
         created () {
-            this.fetchBio()
+            this.fetchEcoute()
         }
 }
 </script>

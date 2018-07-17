@@ -20,6 +20,9 @@ html, body {
 
 body {
   background-color: $light-color;
+  @media screen and (max-width: 400px){
+    font-size:1.2em;
+  }
 }
 
 #app {
@@ -33,7 +36,9 @@ body {
 .contenu{
   background-color: rgba($light-color, 0.7);
   margin-top: 20px;
-
+  padding-top:20px;
+  padding-bottom:20px;
+  overflow-x: hidden;
 }
 
 h1.band-title{
@@ -42,6 +47,9 @@ h1.band-title{
   color: black;
   @media (max-width: 800px) {
     font-size: 6em;
+  }
+  @media (max-width: 400px) {
+    font-size: 4em,
   }
 }
 
@@ -52,6 +60,11 @@ h2{
 .band-title {
   font-family:heavy-trip, sans-serif;
   font-size:1.5em;
+}
+
+.font-menu {
+  font-family: heavy-trip, sans-serif;
+  font-size: 1.2em;
 }
 
 .web-title {
@@ -72,7 +85,7 @@ video#bgvid {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(assets/img/lunar_storm_jk.jpg) no-repeat;
+  background: url(assets/img/lunar-storm-feline.png) no-repeat;
   background-size: cover;
 }
 
@@ -109,7 +122,7 @@ nav {
 
 
 .bg-opacity{
-  background-color: rgba($dark-color, 0.7);
+  background-color: rgba($dark-color, 0.3);
   position: center;
   top: 0;
   left: 0;
@@ -175,10 +188,9 @@ nav {
 }
 
 .bandcamp {
-  margin-top:10px;
-  width:400px;
-  @media (max-width: 400px) {
-    width:270px;
+  overflow:hidden;
+  @media screen and (max-width: 425px) {
+    margin-right: 15px;
   }
 }
 
@@ -250,4 +262,20 @@ nav {
 
 .gmap-auto {
   width:600px;
+}
+
+.trademarks {
+  margin:auto;
+  img{
+    margin:10px;
+    @media screen and (max-width:575px) {
+      max-width: 200px;
+    }
+    @media screen and (min-width:990px){
+      max-width: 200px;
+    }
+    &:hover {
+      filter: grayscale(70%);
+    }
+  }
 }

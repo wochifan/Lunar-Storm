@@ -38,10 +38,10 @@
                     tokenRef.child('alea').update({
                         value: randomNumber
                     })
-                    window.location.replace("http://localhost:8080/addconcert")
+                    this.$router.push('/addconcert')
                 }else{
                     alert("Identifiant ou mot de passe incorrect")
-                    window.location.replace("http://localhost:8080/")
+                    this.$router.push('/')
                 }
             }
         }

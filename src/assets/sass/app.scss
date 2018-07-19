@@ -26,7 +26,7 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -49,7 +49,7 @@ h1.band-title{
     font-size: 6em;
   }
   @media (max-width: 400px) {
-    font-size: 4em,
+    font-size: 4em;
   }
 }
 
@@ -64,12 +64,16 @@ h2{
 
 .font-menu {
   font-family: heavy-trip, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .web-title {
   width:100%;
   overflow: auto;
+}
+
+.subtitle {
+  margin:auto;
 }
 
 video#bgvid {
@@ -281,13 +285,17 @@ nav {
 }
 
 .filters {
-  list-style: none;
+  padding-left:0;
+  padding-bottom: 30px;
   li {
     display:inline;
     color: inherit;
     margin: 3px;
     padding: 3px 7px;
     text-decoration: none;
+    @media screen and (max-width: 360px){
+    display: flex;
+  }
     a{
       padding:2px;
       border: $dark-color solid 1px;
@@ -296,6 +304,76 @@ nav {
     }
     a:hover {
       color: $primary-color;
+      text-decoration:none;
+    }
+    a.selected {
+      color: $third-color;
+      background-color: $primary-color;
     }
   }
+}
+
+.ajout-contact {
+  display:grid;
+  margin:auto;
+}
+
+.table{
+  td{
+  }
+}
+.hide-editing{
+  display:inline-block;
+}
+.show-editing{
+  display:none;
+}
+
+.editingConcert{
+  @media screen and (max-width: 770px){
+    display:grid;
+  }
+  .hide-editing{
+    display:none;
+  }
+  .show-editing{
+    display:inline-block;
+  }
+}
+
+.not-little-screen {
+  @media screen and (max-width: 420px) {
+    display:none;
+  }
+}
+
+.liste-concert {
+  margin-top: 10px;
+}
+
+.concert {
+  border: $light-color solid 1px;
+  padding:15px;
+  width:90%;
+  margin: auto;
+  display:flex;
+}
+
+.concert-date {
+  font-weight: bold;
+  margin:auto;
+}
+
+.concert-name {
+  margin:auto;
+}
+
+.concert-lieu {
+  margin:auto;
+}
+
+.form-control {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }

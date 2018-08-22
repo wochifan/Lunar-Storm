@@ -1,8 +1,6 @@
 <template>
 
     <div class="mentionslegales contenu">
-        <p style="text-align:center"><span style="color:#FF0000"><span style="background-color:#D3D3D3">Si vous utilisez nos Mentions Légales, vous vous engagez à laisser les liens </span><strong><span style="background-color:#D3D3D3">Crédit sans en modifier ni les liens ni les ancres.</span></strong><span style="background-color:#D3D3D3"> </span></span><br />
-            <span style="color:#FF0000"><span style="background-color:#D3D3D3">Par avance merci pour votre compréhension et le respect du travail effectué par toute l'équipe</span></span></p>
 
         <p style="text-align:center">MENTIONS LEGALES :</p>
 
@@ -21,7 +19,9 @@
             <br />
             Le Webmaster est  : <strong>Adrien PIQUERA</strong><br />
             Contacter le Webmaster :  <strong><a href="mailto:lunar.storm.share@gmail.com?subject=Contact a partir des mentions lÃ©gales via le site lunar-storm.fr">lunar.storm.share@gmail.com</a></strong><br />
+            <br/>
             L’hebergeur du site est : <strong>ONLINE SAS BP 438 75366 PARIS CEDEX 08</strong><br />
+            <br/>
             <strong><u>CREDIT :</u> </strong> Les mentions légales ont étés générées par<strong> <a href="https://www.generer-mentions-legales.com/generateur-mentions-legales.html" target="_blank">générateur de mentions legales</a></strong><br />
             Renseignements sur la <a href="https://editioneo.com/formalites/declaration-cnil" target="_blank">conformité RGPD</a></p>
 

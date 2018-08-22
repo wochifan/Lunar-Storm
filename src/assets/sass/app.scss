@@ -298,12 +298,7 @@ nav {
   margin:auto;
   img{
     margin-top:30px;
-    @media screen and (max-width:575px) {
-      max-width: 200px;
-    }
-    @media screen and (min-width:990px){
-      max-width: 200px;
-    }
+    max-width: 150px;
     &:hover {
       filter: grayscale(70%);
     }
@@ -402,4 +397,23 @@ nav {
   border-left: 0;
   border-right: 0;
   border-top: 0;
+}
+
+footer{
+  margin-top: 10px;
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  color: $light-color;
+  font-size: 0.8em;
+  a{
+    color: $light-color;
+  }
+  a:hover{
+    color: $light-color;
+  }
+}
+
+.view{
+  min-height:95vh;
 }

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+      <div class="view">
     <header>
         <div class="socialmedia">
             <ul>
@@ -12,7 +13,7 @@
             <h1 class="band-title">Lunar Storm</h1>
             <div @click="menu = !menu" class="menu-button" :class="{activeMenu: menu === true}"></div>
             <nav class="nav justify-content-center">
-                <ul class="nav font-menu" :class="{showMenu: menu === true}">
+                <ul @click="menu = false" class="nav font-menu" :class="{showMenu: menu === true}">
                     <li><router-link :to="{name: 'root'}" >Accueil</router-link></li>
                     <li><router-link :to="{name: 'ecoute'}">Nous ecouter</router-link></li>
                     <li><router-link :to="{name: 'concerts'}">Nos concerts</router-link></li>
@@ -28,8 +29,9 @@
           <transition name="swipe-transition">
               <router-view></router-view>
           </transition>
-
       </div>
+      </div>
+      <footer>Lunar Storm - Tous droits réservés - <router-link :to="{name: 'mentionslegales'}">Mentions légales</router-link></footer>
   </div>
 </template>
 

@@ -10,14 +10,15 @@
         </div>
         <div class="web-title">
             <h1 class="band-title">Lunar Storm</h1>
+            <div @click="menu = !menu" class="menu-button" :class="{activeMenu: menu === true}"></div>
             <nav class="nav justify-content-center">
-            <ul class="nav font-menu">
-                <li id="accueil-menu"><router-link :to="{name: 'root'}" >Accueil</router-link></li>
-                <li><router-link :to="{name: 'ecoute'}">Nous ecouter</router-link></li>
-                <li><router-link :to="{name: 'concerts'}">Nos concerts</router-link></li>
-                <li><router-link :to="{name: 'actualites'}">Nos actualites</router-link></li>
-            </ul>
-        </nav>
+                <ul class="nav font-menu" :class="{showMenu: menu === true}">
+                    <li><router-link :to="{name: 'root'}" >Accueil</router-link></li>
+                    <li><router-link :to="{name: 'ecoute'}">Nous ecouter</router-link></li>
+                    <li><router-link :to="{name: 'concerts'}">Nos concerts</router-link></li>
+                    <li><router-link :to="{name: 'actualites'}">Nos actualites</router-link></li>
+                </ul>
+            </nav>
         </div>
     </header>
       <div class="container">
@@ -39,7 +40,8 @@
     name: 'app',
     data () {
         return {
-            ecoute: false
+            ecoute: false,
+            menu: false,
         }
     },
     components: {

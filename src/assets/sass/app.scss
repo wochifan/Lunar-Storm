@@ -97,6 +97,24 @@ header{
   background-color: rgba($light-color, 0.7);
 }
 
+.menu-button{
+  cursor: pointer;
+  height:50px;
+  width: 50px;
+  background-size: 30px 30px;
+  background: url(assets/img/menu.svg) transparent no-repeat;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display:none;
+  @media (max-width:507px) {
+    display:block;
+  }
+}
+
+.activeMenu{
+  transform: rotate(90deg);
+}
+
 nav {
   color :$dark-color;
   border-bottom: $dark-color solid 1px;
@@ -115,12 +133,20 @@ nav {
     }
   }
   @media (max-width:507px) {
-    ul {
-      overflow:scroll;
-      #accueil-menu{
+    .nav{
+      display:block;
+    }
+    ul{
+      li {
         display:none;
       }
     }
+  }
+}
+
+.showMenu {
+  li{
+    display:block;
   }
 }
 
